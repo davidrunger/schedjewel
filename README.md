@@ -6,7 +6,7 @@ Run Sidekiq jobs on a schedule.
 
 Add to your `Gemfile`:
 
-```
+```rb
 gem 'schedjewel', github: 'davidrunger/schedjewel'
 ```
 
@@ -24,7 +24,7 @@ bundle binstubs schedjewel
 
 Then add this entry to your `Procfile`:
 
-```
+```yml
 schedjewel: bin/schedjewel
 ```
 
