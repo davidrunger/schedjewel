@@ -4,6 +4,4 @@
 
 require_relative '../lib/schedjewel.rb'
 
-Schedjewel.logger.level = Logger::DEBUG if opts.debug?
-
 Schedjewel::Runner.new.run
