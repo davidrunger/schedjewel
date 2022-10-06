@@ -21,6 +21,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'activesupport', require: false
   gem 'codecov', require: false
   gem 'rspec', require: false
 end

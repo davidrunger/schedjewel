@@ -13,8 +13,12 @@ require 'bundler/setup'
 Bundler.require(:test)
 require_relative '../lib/schedjewel.rb'
 Dir['spec/support/**/*.rb'].each { |file| require("./#{file}") }
+require 'active_support/testing/time_helpers'
+require 'active_support/isolated_execution_state' # required for `#travel_to`
 
 RSpec.configure do |config|
+  config.include(ActiveSupport::Testing::TimeHelpers)
+
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'
 
@@ -30,5 +34,17 @@ RSpec.configure do |config|
     # for easier comparison of expected vs actual strings, in the event of a failure.
     # https://github.com/rspec/rspec-expectations/issues/ 991#issuecomment-302863645
     RSpec::Support::ObjectFormatter.default_instance.max_formatted_output_length = 2_000
+
+    Schedjewel.logger.level = Logger::WARN # don't print output to console when running tests
+  end
+
+  config.before(:each) do
+    Schedjewel.sidekiq_redis.with { _1.call('flushdb') }
+  end
+
+  config.around(:each, :frozen_time) do |spec|
+    freeze_time
+    spec.run
+    travel_back
   end
 end
