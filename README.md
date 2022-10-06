@@ -28,11 +28,11 @@ Then add this entry to your `Procfile`:
 schedjewel: bin/schedjewel
 ```
 
-Then create a `.schedjewel.yml` schedule / config file as detailed in the next section.
+Then create a `schedjewel.yml` schedule / config file as detailed in the next section.
 
-## `.schedjewel.yml` schedule / config file
+## `schedjewel.yml` schedule / config file
 
-Create a file at `config/.schedjewel.yml` specifying the desired jobs schedule.
+Create a file at `config/schedjewel.yml` specifying the desired jobs schedule.
 
 Example:
 
