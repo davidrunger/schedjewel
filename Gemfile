@@ -14,9 +14,13 @@ group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
   gem 'rake', require: false
-  gem 'rspec', require: false
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rspec', require: false
   gem 'runger_style', github: 'davidrunger/runger_style', require: false
+end
+
+group :test do
+  gem 'codecov', require: false
+  gem 'rspec', require: false
 end
