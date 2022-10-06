@@ -16,8 +16,6 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  config.include(Support::SlopHelpers)
-
   config.before(:suite) do
     # Some of the specs involve somewhat lengthy strings; increase the size of the printed output
     # for easier comparison of expected vs actual strings, in the event of a failure.
