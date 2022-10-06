@@ -25,7 +25,7 @@ bundle binstubs schedjewel
 Then add this entry to your `Procfile`:
 
 ```yml
-schedjewel: bin/schedjewel
+clock: bin/schedjewel
 ```
 
 Then create a `schedjewel.yml` schedule / config file as detailed in the next section.
