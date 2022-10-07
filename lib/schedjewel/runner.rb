@@ -10,7 +10,7 @@ class Schedjewel::Runner
 
   def run
     $stdout.sync = true
-    Schedjewel.logger.info("Clock is running with PID #{Process.pid}.")
+    Schedjewel.logger.info("Schedjewel is running with PID #{Process.pid}.")
 
     loop do
       execute_tasks
@@ -18,7 +18,7 @@ class Schedjewel::Runner
     end
   rescue SignalException
     # :nocov:
-    Schedjewel.logger.info('Thanks for using Clock! Exiting now.')
+    Schedjewel.logger.info('Thanks for using Schedjewel! Exiting now.')
     exit(0)
     # :nocov:
   end
