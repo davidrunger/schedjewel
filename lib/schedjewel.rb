@@ -24,11 +24,6 @@ class Schedjewel
     end
 
     memoize \
-    def config_file_options
-      Schedjewel::ConfigFileOptions.new
-    end
-
-    memoize \
     def sidekiq_redis
       # Our Sidekiq setup uses Redis database number 1 (see config/initializers/sidekiq.rb).
       # We are using `redis` rather than `redis-client` because `redlock` (which we are already
