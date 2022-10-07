@@ -14,12 +14,6 @@ RSpec.describe Schedjewel::Runner do
       expect(File).to receive(:read).with('config/schedjewel.yml').and_return(<<~YML)
         - job: SendLogReminderEmails
           schedule: '**:**' # every minute
-
-        - job: DataMonitors::Launcher
-          schedule: '**:07' # hourly at 7 minutes after
-
-        - job: InvalidRecordsCheck::Launcher
-          schedule: '14:23' # daily at 2:23pm in whichever timezone `Time.now` uses
       YML
     end
 

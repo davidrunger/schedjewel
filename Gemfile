@@ -24,4 +24,6 @@ group :test do
   gem 'activesupport', require: false
   gem 'codecov', require: false
   gem 'rspec', require: false
+  gem 'simplecov'
+  gem 'simple_cov-formatter-terminal', github: 'davidrunger/simple_cov-formatter-terminal'
 end
