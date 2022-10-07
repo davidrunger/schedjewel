@@ -28,4 +28,39 @@ RSpec.describe Schedjewel::Task do
       })
     end
   end
+
+  describe '#should_run?' do
+    subject(:should_run?) { task.should_run? }
+
+    context 'when the schedule matches the current time' do
+      around do |spec|
+        travel_to Time.new(2022, 9, 30, 23, 59, 10) do
+          spec.run
+        end
+      end
+
+      let(:resource_key) { task.__send__(:resource_key, Time.now) }
+
+      context 'when the task has not been run yet in that minute' do
+        before do
+          expect(task.lock_manager.locked?(resource_key)).to eq(false)
+        end
+
+        it 'returns true' do
+          expect(should_run?).to eq(true)
+        end
+      end
+
+      context 'when the task has already been run in that minute' do
+        before do
+          task.lock_manager.lock(resource_key, 60_000)
+          expect(task.lock_manager.locked?(resource_key)).to eq(true)
+        end
+
+        it 'returns false' do
+          expect(should_run?).to eq(false)
+        end
+      end
+    end
+  end
 end

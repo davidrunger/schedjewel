@@ -13,7 +13,6 @@ group :development, :test do
   gem 'bundler', require: false
   gem 'pry'
   gem 'pry-byebug'
-  gem 'rake', require: false
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rspec', require: false
