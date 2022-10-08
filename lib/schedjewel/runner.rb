@@ -26,7 +26,7 @@ class Schedjewel::Runner
   memoize \
   def lock_manager
     Redlock::Client.new(
-      [Schedjewel.sidekiq_redis],
+      [Schedjewel.app_redis],
       { retry_count: 0 },
     )
   end
@@ -41,7 +41,7 @@ class Schedjewel::Runner
 
   memoize \
   def tasks
-    YAML.load(ERB.new(File.read('config/schedjewel.yml')).result).map do |task_hash|
+    Schedjewel.parsed_config_file['jobs'].map do |task_hash|
       Schedjewel::Task.new(
         job_name: task_hash['job'],
         schedule_string: task_hash['schedule'],

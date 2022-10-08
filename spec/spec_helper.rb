@@ -22,6 +22,7 @@ require 'active_support/testing/time_helpers'
 require 'active_support/isolated_execution_state' # required for `#travel_to`
 
 RSpec.configure do |config|
+  config.include(SpecHelpers)
   config.include(ActiveSupport::Testing::TimeHelpers)
 
   # Enable flags like --only-failures and --next-failure
@@ -29,6 +30,8 @@ RSpec.configure do |config|
 
   # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
+
+  config.filter_run_when_matching(:focus)
 
   config.expect_with(:rspec) do |c|
     c.syntax = :expect
@@ -44,6 +47,8 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
+    stub_config_file_content
+    Schedjewel.app_redis.with { _1.call('flushdb') }
     Schedjewel.sidekiq_redis.with { _1.call('flushdb') }
   end
 

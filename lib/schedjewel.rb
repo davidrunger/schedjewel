@@ -24,11 +24,23 @@ class Schedjewel
     end
 
     memoize \
+    def app_redis
+      Redis.new(url: "#{config.redis_url}/#{config.app_redis_db}")
+    end
+
+    memoize \
     def sidekiq_redis
-      # Our Sidekiq setup uses Redis database number 1 (see config/initializers/sidekiq.rb).
-      # We are using `redis` rather than `redis-client` because `redlock` (which we are already
-      # using for locking) uses `redis`.
-      Redis.new(url: "#{ENV.fetch('REDIS_URL', 'redis://localhost:6379')}/1")
+      Redis.new(url: "#{config.redis_url}/#{config.sidekiq_redis_db}")
+    end
+
+    memoize \
+    def config
+      Schedjewel::Config.new(parsed_config_file['config'] || {})
+    end
+
+    memoize \
+    def parsed_config_file
+      YAML.load(ERB.new(File.read('config/schedjewel.yml')).result)
     end
   end
 end

@@ -10,11 +10,6 @@ RSpec.describe Schedjewel::Runner do
       expect(runner).to receive(:loop) do |&block|
         expect { block.call }.not_to raise_error
       end
-
-      expect(File).to receive(:read).with('config/schedjewel.yml').and_return(<<~YML)
-        - job: SendLogReminderEmails
-          schedule: '**:**' # every minute
-      YML
     end
 
     let(:email_reminders_task) do
