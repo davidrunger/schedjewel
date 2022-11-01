@@ -49,6 +49,17 @@ jobs:
   TruncateTables: '04:58'
 ```
 
+## A more performan alternative: Skedjewel
+
+[Skedjewel][skedjewel] is a Crystal library with very similar functionality. It's also maintained by
+me, @davidrunger.
+
+Installing Skedjewel binaries is less convenient than installing Schedjewel as a gem, but it has the
+advantage of using less memory, so you might consider using Skedjewel, instead, if low memory usage
+is a priority for you.
+
+[skedjewel]: https://github.com/davidrunger/skedjewel
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
