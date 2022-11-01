@@ -37,14 +37,16 @@ Create a file at `config/schedjewel.yml` specifying the desired jobs schedule.
 Example:
 
 ```yml
-- job: SendLogReminderEmails
-  schedule: '**:**' # every minute
+# config/schedjewel.yml
 
-- job: DataMonitors::Launcher
-  schedule: '**:07' # hourly at 7 minutes after
+config:
+  app_redis_db: 0
+  sidekiq_redis_db: 1
 
-- job: InvalidRecordsCheck::Launcher
-  schedule: '14:23' # daily at 2:23pm in whichever timezone `Time.now` uses
+jobs:
+  DataMonitors::Launcher: '**:07'
+  SendLogReminderEmails: '**:**'
+  TruncateTables: '04:58'
 ```
 
 ## Development
