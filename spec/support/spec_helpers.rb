@@ -11,12 +11,9 @@ module SpecHelpers
           sidekiq_redis_db: <%= ENV.fetch('NONEXISTENT_ENV_VAR', -1 * -1) %>
 
         jobs:
-          - job: SendLogReminderEmails
-            schedule: '**:**'
-          - job: DataMonitors::Launcher
-            schedule: '**:07'
-          - job: InvalidRecordsCheck::Launcher
-            schedule: '01:23'
+          DataMonitors::Launcher: '**:07'
+          SendLogReminderEmails: '**:**'
+          TruncateTables: '04:58'
       YML
   end
 end

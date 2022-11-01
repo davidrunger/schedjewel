@@ -41,10 +41,10 @@ class Schedjewel::Runner
 
   memoize \
   def tasks
-    Schedjewel.parsed_config_file['jobs'].map do |task_hash|
+    Schedjewel.parsed_config_file['jobs'].map do |job_name, schedule_string|
       Schedjewel::Task.new(
-        job_name: task_hash['job'],
-        schedule_string: task_hash['schedule'],
+        job_name:,
+        schedule_string:,
         runner: self,
       )
     end
