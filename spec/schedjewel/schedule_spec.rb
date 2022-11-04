@@ -45,6 +45,26 @@ RSpec.describe Schedjewel::Schedule do
 
         it { is_expected.to eq(false) }
       end
+
+      context 'when the schedule string has a double zero hour' do
+        let(:schedule_string) { '00:44' }
+
+        context 'when the time is that time' do
+          let(:time) { Time.new(2022, 12, 23, 0, 44, 22) }
+
+          it { is_expected.to eq(true) }
+        end
+      end
+
+      context 'when the schedule string has a double zero minute' do
+        let(:schedule_string) { '03:00' }
+
+        context 'when the time is that time' do
+          let(:time) { Time.new(2022, 12, 23, 3, 0, 51) }
+
+          it { is_expected.to eq(true) }
+        end
+      end
     end
   end
 end
