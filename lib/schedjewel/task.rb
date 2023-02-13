@@ -18,7 +18,7 @@ class Schedjewel::Task
 
   def run
     lock_manager.lock(resource_key(Time.now), 60_000)
-    Schedjewel.sidekiq_redis.lpush('queue:default', JSON.dump(job_hash))
+    Schedjewel.sidekiq_redis.call('LPUSH', 'queue:default', JSON.dump(job_hash))
 
     nil
   end

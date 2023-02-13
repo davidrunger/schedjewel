@@ -2,7 +2,7 @@
 
 require 'logger'
 require 'memoist'
-require 'redis'
+require 'redis-client'
 require 'yaml'
 
 # rubocop:disable Lint/EmptyClass
@@ -25,12 +25,12 @@ class Schedjewel
 
     memoize \
     def app_redis
-      Redis.new(url: "#{config.redis_url}/#{config.app_redis_db}")
+      RedisClient.new(url: "#{config.redis_url}/#{config.app_redis_db}")
     end
 
     memoize \
     def sidekiq_redis
-      Redis.new(url: "#{config.redis_url}/#{config.sidekiq_redis_db}")
+      RedisClient.new(url: "#{config.redis_url}/#{config.sidekiq_redis_db}")
     end
 
     memoize \
