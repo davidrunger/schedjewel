@@ -87,7 +87,7 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
     ruby-progressbar (1.11.0)
-    simple_cov-formatter-terminal (0.2.0)
+    simple_cov-formatter-terminal (0.2.1)
       activesupport (>= 7.0.4, < 8)
       memoist (>= 0.16.2, < 1)
       rouge (>= 4.0.0, < 5)
