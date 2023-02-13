@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency('memoist', '~> 0.16')
   spec.add_dependency('redis', '~> 5.0')
-  spec.add_dependency('redlock', '~> 1.3')
+  spec.add_dependency('redlock', '>= 1.3', '< 3.0')
 
   spec.required_ruby_version = '>= 3.1'
 end
