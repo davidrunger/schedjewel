@@ -36,8 +36,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency('memoist', '~> 0.16')
-  spec.add_dependency('redis', '~> 5.0')
-  spec.add_dependency('redlock', '~> 1.3')
+  spec.add_dependency('redis-client', '~> 0.12')
+  spec.add_dependency('redlock', '~> 2.0')
 
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.2'
 end

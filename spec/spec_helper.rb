@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 require 'simplecov'
-executed_spec_files = ARGV.grep(%r{\Aspec/.+_spec\.rb})
 if ENV.fetch('CI', nil) == 'true'
   require 'codecov'
   SimpleCov.formatter = SimpleCov::Formatter::Codecov
-elsif executed_spec_files.size == 1
+elsif RSpec.configuration.files_to_run.one?
   require 'simple_cov/formatter/terminal'
-  SimpleCov::Formatter::Terminal.executed_spec_files = executed_spec_files
   SimpleCov.formatter = SimpleCov::Formatter::Terminal
 end
 SimpleCov.start do
