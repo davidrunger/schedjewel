@@ -46,9 +46,9 @@ GEM
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
     rainbow (3.1.1)
-    redis-client (0.12.1)
+    redis-client (0.12.2)
       connection_pool
-    redlock (2.0.0)
+    redlock (2.0.1)
       redis-client
     regexp_parser (2.7.0)
     rexml (3.2.5)
