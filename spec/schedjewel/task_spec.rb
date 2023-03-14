@@ -33,11 +33,7 @@ RSpec.describe Schedjewel::Task do
     subject(:should_run?) { task.should_run? }
 
     context 'when the schedule matches the current time' do
-      around do |spec|
-        travel_to Time.new(2022, 9, 30, 23, 59, 10) do
-          spec.run
-        end
-      end
+      before { travel_to Time.new(2022, 9, 30, 23, 59, 10) }
 
       let(:resource_key) { task.__send__(:resource_key, Time.now) }
 
