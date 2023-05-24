@@ -28,3 +28,7 @@ jobs:
       run: bin/rubocop --format clang
     - name: Run RSpec tests
       run: bin/rspec --format progress
+    - name: Upload Code Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        directory: tmp/simple_cov

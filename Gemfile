@@ -21,8 +21,8 @@ end
 
 group :test do
   gem 'activesupport', require: false
-  gem 'codecov', require: false
   gem 'rspec', require: false
   gem 'simplecov'
+  gem 'simplecov-cobertura', require: false
   gem 'simple_cov-formatter-terminal'
 end
