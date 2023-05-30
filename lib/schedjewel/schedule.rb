@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'memoist'
+require 'memo_wise'
 
 class Schedjewel::Schedule
-  extend Memoist
+  prepend MemoWise
 
   def initialize(schedule_string)
     @hour, @minute = schedule_string.split(':')
@@ -23,12 +23,12 @@ class Schedjewel::Schedule
     @minute == '**' || time.min == integer_minute
   end
 
-  memoize \
+  memo_wise \
   def integer_hour
     Integer(@hour.delete_prefix('0'))
   end
 
-  memoize \
+  memo_wise \
   def integer_minute
     Integer(@minute.delete_prefix('0'))
   end

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'erb'
-require 'memoist'
+require 'memo_wise'
 require 'redlock'
 require 'yaml'
 
 class Schedjewel::Runner
-  extend Memoist
+  prepend MemoWise
 
   def run
     $stdout.sync = true
@@ -23,7 +23,7 @@ class Schedjewel::Runner
     # :nocov:
   end
 
-  memoize \
+  memo_wise \
   def lock_manager
     Redlock::Client.new(
       [Schedjewel.app_redis],
@@ -39,7 +39,7 @@ class Schedjewel::Runner
     end
   end
 
-  memoize \
+  memo_wise \
   def tasks
     Schedjewel.parsed_config_file['jobs'].map do |job_name, schedule_string|
       Schedjewel::Task.new(
