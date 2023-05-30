@@ -1,3 +1,6 @@
+## Unreleased
+[no unreleased changes yet]
+
 ## v0.0.1 (2023-05-30)
 ### Added
 - Initial release
