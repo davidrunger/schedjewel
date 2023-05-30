@@ -22,3 +22,7 @@ group :test do
   gem 'simplecov-cobertura', require: false
   gem 'simple_cov-formatter-terminal'
 end
+
+group :development do
+  gem 'runger_release_assistant', require: false
+end
