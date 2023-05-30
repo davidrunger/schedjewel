@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'memoist'
+require 'memo_wise'
 require 'securerandom'
 
 class Schedjewel::Task
   extend Forwardable
-  extend Memoist
+  prepend MemoWise
 
   def_delegators(:@runner, :lock_manager)
 

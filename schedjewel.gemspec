@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency('memoist', '~> 0.16')
+  spec.add_dependency('memo_wise', '>= 1.7', '< 2')
   spec.add_dependency('redis-client', '~> 0.12')
   spec.add_dependency('redlock', '~> 2.0')
 
