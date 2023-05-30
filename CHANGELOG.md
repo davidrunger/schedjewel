@@ -1,4 +1,4 @@
-## Unreleased
+## v0.0.1 (2023-05-30)
 ### Added
 - Initial release
 - Added `runger_release_assistant`
