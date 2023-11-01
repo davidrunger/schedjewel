@@ -52,7 +52,7 @@ GEM
     rainbow (3.1.1)
     redis-client (0.18.0)
       connection_pool
-    redlock (2.0.5)
+    redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
     regexp_parser (2.8.2)
     rexml (3.2.6)
