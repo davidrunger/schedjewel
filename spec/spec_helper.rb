@@ -13,8 +13,6 @@ SimpleCov.start do
   add_filter(%r{\A/spec/})
 end
 
-require 'bundler/setup'
-Bundler.require(:test)
 require_relative '../lib/schedjewel.rb'
 Dir['spec/support/**/*.rb'].each { |file| require("./#{file}") }
 require 'active_support'
