@@ -20,7 +20,7 @@ group :test do
   gem 'rspec', require: false
   gem 'simplecov'
   gem 'simplecov-cobertura', require: false
-  gem 'simple_cov-formatter-terminal'
+  gem 'simple_cov-formatter-terminal', require: false
 end
 
 group :development do
