@@ -2,6 +2,6 @@
 
 # rubocop:disable Style/StaticClass
 class Schedjewel
-  VERSION = '0.1.0'
+  VERSION = '0.1.1.alpha'
 end
 # rubocop:enable Style/StaticClass
