@@ -8,6 +8,8 @@ gemspec
 
 group :development, :test do
   gem 'bundler', require: false
+  # Source prism from GitHub for unreleased fixes, e.g. https://github.com/ruby/prism/pull/ 2563 .
+  gem 'prism', github: 'ruby/prism', require: false
   gem 'pry'
   gem 'pry-byebug'
   gem 'rubocop', require: false
