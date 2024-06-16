@@ -1,4 +1,4 @@
-## Unreleased
+## v0.2.0 (2024-06-15)
 - Rename primary branch from `master` to `main`
 
 ## v0.1.0 (2024-02-02)
