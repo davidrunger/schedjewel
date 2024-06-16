@@ -49,7 +49,7 @@ jobs:
   TruncateTables: '04:58'
 ```
 
-## A more performan alternative: Skedjewel
+## A lower-memory alternative: Skedjewel
 
 [Skedjewel][skedjewel] is a Crystal library with very similar functionality. It's also maintained by
 me, @davidrunger.
