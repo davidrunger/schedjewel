@@ -39,5 +39,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency('redis-client', '~> 0.12')
   spec.add_dependency('redlock', '~> 2.0')
 
-  spec.required_ruby_version = ">= #{File.read('.ruby-version').rstrip}"
+  required_ruby_version = File.read('.ruby-version').rstrip.sub(/\A(\d+\.\d+)\.\d+\z/, '.0')
+  spec.required_ruby_version = ">= #{required_ruby_version}"
 end
