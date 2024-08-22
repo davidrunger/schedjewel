@@ -56,7 +56,7 @@ GEM
     redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
     regexp_parser (2.9.2)
-    rexml (3.3.5)
+    rexml (3.3.6)
       strscan
     rouge (4.3.0)
     rspec (3.13.0)
