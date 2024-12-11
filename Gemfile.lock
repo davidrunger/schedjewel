@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    schedjewel (0.3.1.alpha)
+    schedjewel (0.4.0)
       memo_wise (>= 1.7)
       redis-client (~> 0.12)
       redlock (~> 2.0)
