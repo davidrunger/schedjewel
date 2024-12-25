@@ -58,7 +58,7 @@ GEM
       connection_pool
     redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
-    regexp_parser (2.9.3)
+    regexp_parser (2.10.0)
     rexml (3.4.0)
     rouge (4.5.1)
     rspec (3.13.0)
