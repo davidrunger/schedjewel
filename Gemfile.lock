@@ -54,7 +54,7 @@ GEM
       pry (>= 0.13, < 0.15)
     racc (1.8.1)
     rainbow (3.1.1)
-    redis-client (0.23.1)
+    redis-client (0.23.2)
       connection_pool
     redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
@@ -173,7 +173,7 @@ CHECKSUMS
   pry-byebug (3.10.1) sha256=c8f975c32255bfdb29e151f5532130be64ff3d0042dc858d0907e849125581f8
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
-  redis-client (0.23.1) sha256=da8c8d327e41ac0a5f5fa6916539dfc4675997a968791a5acb44df9c710e8cf5
+  redis-client (0.23.2) sha256=e33bab6682c8155cfef95e6dd296936bb9c2981a89fb578ace27a076fa2836fa
   redlock (2.0.6) sha256=de262f7d7c78112435b6b356766b7733e05c452f25cf66c23b0eec1dc2893dde
   regexp_parser (2.10.0) sha256=cb6f0ddde88772cd64bff1dbbf68df66d376043fe2e66a9ef77fcb1b0c548c61
   rexml (3.4.0) sha256=efbea1efba7fa151158e0ee1e643525834da2d8eb4cf744aa68f6480bc9804b2
