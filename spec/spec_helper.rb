@@ -16,8 +16,6 @@ end
 require 'bundler/setup'
 Bundler.require(:default, :test)
 
-require_relative '../lib/schedjewel.rb'
-
 Dir['spec/support/**/*.rb'].each { |file| require("./#{file}") }
 require 'active_support'
 require 'active_support/testing/time_helpers'
