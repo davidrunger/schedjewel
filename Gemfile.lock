@@ -157,10 +157,8 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   bundler
-  irb
   pry
   pry-byebug!
-  reline
   rspec
   rubocop
   rubocop-performance
