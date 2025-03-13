@@ -130,7 +130,7 @@ GEM
       prism (>= 0.24.0)
       rubocop (>= 1.72.0)
     securerandom (0.4.1)
-    simple_cov-formatter-terminal (1.7.1)
+    simple_cov-formatter-terminal (1.8.0)
       activesupport (>= 7.0.4)
       memo_wise (>= 1.7.0)
       rouge (>= 4.0.0)
@@ -230,7 +230,7 @@ CHECKSUMS
   runger_style (5.7.0) sha256=200790f3998e0b924df17efc9d440ddec99508bae983ba2a63f42b80624762f0
   schedjewel (0.4.1.alpha)
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
-  simple_cov-formatter-terminal (1.7.1) sha256=50d36c4067133676574f72d36db532dda2bd144efaeb2c46f1bf4f06ce140a26
+  simple_cov-formatter-terminal (1.8.0) sha256=6785586b2842c215f4fb32cd92d7de6c08c55891a06a35a405db9fd2e58fd98d
   simplecov (0.22.0) sha256=fe2622c7834ff23b98066bb0a854284b2729a569ac659f82621fc22ef36213a5
   simplecov-cobertura (2.1.0) sha256=2c6532e34df2e38a379d72cef9a05c3b16c64ce90566beebc6887801c4ad3f02
   simplecov-html (0.13.1) sha256=5dab0b7ee612e60e9887ad57693832fdf4695b4c0c859eaea5f95c18791ef10b
