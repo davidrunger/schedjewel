@@ -71,6 +71,7 @@ GEM
       stringio
     racc (1.8.1)
     rainbow (3.1.1)
+    rake (13.2.1)
     rdoc (6.12.0)
       psych (>= 4.0.0)
     redis-client (0.24.0)
@@ -121,10 +122,11 @@ GEM
       reline
     runger_config (5.2.0)
       activesupport (>= 7.1.2)
-    runger_release_assistant (2.0.0)
+    runger_release_assistant (2.0.1)
       activesupport (>= 6)
       memo_wise (>= 1.7)
       rainbow (>= 3.0)
+      rake (>= 13.2.1)
       slop (~> 4.8)
     runger_style (5.7.0)
       prism (>= 0.24.0)
@@ -207,6 +209,7 @@ CHECKSUMS
   psych (5.2.3) sha256=84a54bb952d14604fea22d99938348814678782f58b12648fcdfa4d2fce859ee
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
+  rake (13.2.1) sha256=46cb38dae65d7d74b6020a4ac9d48afed8eb8149c040eccf0523bec91907059d
   rdoc (6.12.0) sha256=7d6f706e070bffa5d18a448f24076cbfb34923a99c1eab842aa18e6ca69f56e0
   redis-client (0.24.0) sha256=ee65ee39cb2c38608b734566167fd912384f3c1241f59075e22858f23a085dbb
   redlock (2.0.6) sha256=de262f7d7c78112435b6b356766b7733e05c452f25cf66c23b0eec1dc2893dde
@@ -226,7 +229,7 @@ CHECKSUMS
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   runger_byebug (11.4.0) sha256=569e22ba2215f57e7f69e145fcb63be401e29fcd312f7936d813e12d0c7bbee6
   runger_config (5.2.0) sha256=9b76d767a2daa63f6f8f2c52a8183f3f09a877cd35bcaee692d25377f4dd4558
-  runger_release_assistant (2.0.0) sha256=f4f5708291eaeef1b881208f87a494877fe768739d6e96b7293fc335b28a3865
+  runger_release_assistant (2.0.1) sha256=fd3d2599a42e6863b76d766aff03665842abe04e8f0e7fadba1b5c982b9c08e3
   runger_style (5.7.0) sha256=200790f3998e0b924df17efc9d440ddec99508bae983ba2a63f42b80624762f0
   schedjewel (0.4.1.alpha)
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
