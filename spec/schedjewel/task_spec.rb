@@ -16,7 +16,7 @@ RSpec.describe Schedjewel::Task do
       expect {
         run
       }.to change {
-        JSON(Schedjewel.sidekiq_redis.with { _1.call('lpop', 'queue:default') })
+        JSON(Schedjewel.sidekiq_redis.with { it.call('lpop', 'queue:default') })
       }.from('null').to({
         'class' => 'InvalidRecordsCheck::Launcher',
         'queue' => 'default',
