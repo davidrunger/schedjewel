@@ -16,7 +16,7 @@ RSpec.describe Schedjewel::Runner do
       # this task is scheduled to run every minute, so it should run regardless of the time
       runner.
         __send__(:tasks).
-        detect { _1.instance_variable_get(:@job_name) == 'SendLogReminderEmails' }
+        detect { it.instance_variable_get(:@job_name) == 'SendLogReminderEmails' }
     end
 
     it 'runs the tasks that should be run' do

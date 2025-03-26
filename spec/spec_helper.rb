@@ -48,8 +48,8 @@ RSpec.configure do |config|
 
   config.before(:each) do
     stub_config_file_content
-    Schedjewel.app_redis.with { _1.call('flushdb') }
-    Schedjewel.sidekiq_redis.with { _1.call('flushdb') }
+    Schedjewel.app_redis.with { it.call('flushdb') }
+    Schedjewel.sidekiq_redis.with { it.call('flushdb') }
   end
 
   config.around(:each, :frozen_time) do |spec|
