@@ -35,7 +35,9 @@ class Schedjewel::Runner
 
   def execute_tasks
     tasks.each do |task|
-      task.run if task.should_run?
+      if task.should_run?
+        task.run
+      end
     end
   end
 
