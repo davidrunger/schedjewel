@@ -5,9 +5,8 @@ require 'memo_wise'
 require 'redis-client'
 require 'yaml'
 
-# rubocop:disable Lint/EmptyClass
+# rubocop:disable-next Lint/EmptyClass
 class Schedjewel; end
-# rubocop:enable Lint/EmptyClass
 
 Dir["#{File.dirname(__FILE__)}/schedjewel/*.rb"].each { |file| require file }
 

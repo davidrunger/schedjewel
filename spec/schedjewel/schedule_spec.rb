@@ -8,7 +8,7 @@ RSpec.describe Schedjewel::Schedule do
 
     context 'when the schedule is to run every minute' do
       let(:schedule_string) { '**:**' }
-      let(:time) { Time.new }
+      let(:time) { Time.now }
 
       it 'matches any time' do
         expect(matches?).to eq(true)
