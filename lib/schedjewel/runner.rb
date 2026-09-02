@@ -17,10 +17,10 @@ class Schedjewel::Runner
       sleep(seconds_until_next_minute(Time.now) + 0.001)
     end
   rescue SignalException
-    # :nocov:
+    # simplecov:disable
     Schedjewel.logger.info('Thanks for using Schedjewel! Exiting now.')
     exit(0)
-    # :nocov:
+    # simplecov:enable
   end
 
   memo_wise \
