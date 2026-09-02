@@ -7,9 +7,13 @@ RSpec.describe Schedjewel::Runner do
     subject(:run) { runner.run }
 
     before do
-      expect(runner).to receive(:loop) do |&block|
+      allow(runner).to receive(:loop) do |&block|
         expect { block.call }.not_to raise_error
       end
+    end
+
+    after do
+      expect(runner).to have_received(:loop).once
     end
 
     let(:email_reminders_task) do
@@ -20,13 +24,15 @@ RSpec.describe Schedjewel::Runner do
     end
 
     it 'runs the tasks that should be run' do
-      expect(email_reminders_task).to receive(:run).and_call_original
+      allow(email_reminders_task).to receive(:run).and_call_original
 
       # Travel to near the end of a minute (59 seconds) because the #run block will `sleep` until
       # the beginning of the next minute.
       travel_to Time.new(2022, 9, 30, 23, 34, 59) do
         run
       end
+
+      expect(email_reminders_task).to have_received(:run)
     end
   end
 end
