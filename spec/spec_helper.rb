@@ -9,9 +9,7 @@ elsif RSpec.configuration.files_to_run.one?
   require 'simple_cov/formatter/terminal'
   SimpleCov.formatter = SimpleCov::Formatter::Terminal
 end
-SimpleCov.start do
-  add_filter(%r{\A/spec/})
-end
+SimpleCov.start
 
 require 'bundler/setup'
 Bundler.require(:default, :test)
